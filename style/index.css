@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  transition: 1s ease-in-out;
+}
+body {
+  background-color: black;
+  background: url(/StarWarsImages/first\ background.jpeg) no-repeat center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+}
+.heading {
+  width: 80%;
+  background-color: gold;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px 20px 20px 20px;
+}
+.subheading {
+  background-color: black;
+}
+
+p {
+  color: yellow;
+  text-align: center;
+}
+img {
+  height: 8rem;
+  width: 8rem;
+  border: 3px solid brown;
+  border-radius: 10px;
+}
+
+img:hover {
+  border: 5px solid gold;
+}
+hr {
+  height: 3px;
+  background-color: brown;
+  border-color: brown;
+}
+.mainContainer {
+  display: flex;
+}
+.container {
+  font-family:'Times New Roman', Times, serif;
+  width: 20rem;
+  height: 8rem;
+  /* margin: 90px; */
+  color: yellow;
+  display: none;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  border: 3px solid gold;
+  border-radius: 2rem;
+  border-width: 4px;
+}
+
+.active {
+  display: block;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 0;
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+  padding: 0 .5rem;
+}
+
+.top,
+.bottom {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30rem;
+  align-items: space-between;
+  gap: 0.5rem;
+  margin-top: -1rem;
+}
+
+.top {
+  align-items: flex-end;
+}
+
+.top .column {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background: #000 url("/StarWarsImages/pexels-philippe-donn-1257860.jpg")
+      no-repeat center;
+    background-size: cover;
+  }
+
+  .row {
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .top {
+    margin-top: 0.5rem;
+    width: 100vw;
+  }
+
+  .bottom {
+    width: 100vw;
+  }
+
+  .column {
+    width: 100vw;
+  }
+  .heading {
+    width: 100%;
+  }
+
+  .meet {
+    display: none;
+  }
+
+  .top .container {
+    width: 65vw;
+    /* margin-left: 7rem; */
+    font-size: 1rem;
+  }
+
+  .bottom .container {
+    font-size: 1rem;
+    width: 65vw;
+    /* margin-right: 7rem; */
+  }
+}
